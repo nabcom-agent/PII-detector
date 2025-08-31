@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PII Detection & Encryption Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>PII Detection & Encryption Tool</h1>
+            <p class="subtitle">Automatically detect and encrypt personally identifiable information in your text for enhanced privacy and security</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" id="main-content">
+            <!-- Input Section -->
+            <section class="input-section card">
+                <div class="card__body">
+                    <h2>Input Text</h2>
+                    <textarea 
+                        id="inputText" 
+                        class="form-control input-textarea" 
+                        placeholder="Paste or type your text here. Sample data will be loaded automatically for demonstration."
+                        rows="8"
+                        aria-describedby="input-help"
+                        aria-label="Text input for PII detection"
+                    ></textarea>
+                    <div id="input-help" class="sr-only">Enter text to analyze for personally identifiable information. The tool will detect emails, phone numbers, addresses, and other PII types.</div>
+                    <div class="button-group">
+                        <button id="analyzeBtn" class="btn btn--primary" aria-describedby="analyze-help">Analyze Text</button>
+                        <button id="clearBtn" class="btn btn--secondary" aria-describedby="clear-help">Clear All</button>
+                    </div>
+                    <div id="analyze-help" class="sr-only">Analyze the input text to detect and highlight personally identifiable information</div>
+                    <div id="clear-help" class="sr-only">Clear all input text and reset the application</div>
+                </div>
+            </section>
+
+            <!-- Detection Results Section -->
+            <section class="detection-section card" id="detectionResults" style="display: none;" aria-live="polite">
+                <div class="card__body">
+                    <h2>Detection Results</h2>
+                    <div class="detection-content">
+                        <div class="highlighted-text" id="highlightedText" role="region" aria-label="Text with highlighted PII"></div>
+                        <div class="detection-summary">
+                            <h3>Detected PII Types</h3>
+                            <div class="pii-legend" id="piiLegend"></div>
+                            <div class="pii-counts" id="piiCounts"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Encryption Options -->
+            <section class="encryption-section card" id="encryptionOptions" style="display: none;">
+                <div class="card__body">
+                    <h2>Encryption Options</h2>
+                    <div class="encryption-controls">
+                        <div class="form-group">
+                            <label for="encryptionMethod" class="form-label">Encryption Method</label>
+                            <select id="encryptionMethod" class="form-control" aria-describedby="method-help">
+                                <option value="mask">Masking (****)</option>
+                                <option value="hash">SHA-256 Hashing</option>
+                                <option value="encrypt">AES Encryption (Demo)</option>
+                                <option value="redact">Redaction</option>
+                            </select>
+                            <div id="method-help" class="sr-only">Choose how to process detected PII. Masking replaces with asterisks, hashing creates secure hashes, encryption uses demo encryption, and redaction removes the text.</div>
+                        </div>
+                        
+                        <div class="form-group password-group" id="passwordGroup" style="display: none;">
+                            <label for="encryptionPassword" class="form-label">Encryption Password</label>
+                            <input type="password" id="encryptionPassword" class="form-control" placeholder="Enter password for encryption" aria-describedby="password-help" minlength="8">
+                            <div id="password-help" class="sr-only">Password must be at least 8 characters long. Note: This is demo encryption only.</div>
+                        </div>
+
+                        <div class="pii-toggles">
+                            <div class="pii-toggles-header">
+                                <h3>Select PII Types to Process</h3>
+                                <div class="toggle-controls">
+                                    <button type="button" id="selectAllBtn" class="btn btn--secondary btn--sm" aria-describedby="select-all-help">Select All</button>
+                                    <button type="button" id="unselectAllBtn" class="btn btn--secondary btn--sm" aria-describedby="unselect-all-help">Unselect All</button>
+                                    <div id="select-all-help" class="sr-only">Enable all PII detection types for processing</div>
+                                    <div id="unselect-all-help" class="sr-only">Disable all PII detection types</div>
+                                </div>
+                            </div>
+                            <div class="toggle-grid" id="piiToggles" role="group" aria-label="PII type selection toggles"></div>
+                        </div>
+
+                        <button id="processBtn" class="btn btn--primary btn--lg" aria-describedby="process-help">Process PII</button>
+                        <div id="process-help" class="sr-only">Apply the selected encryption method to the detected PII in your text</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section card" id="outputSection" style="display: none;">
+                <div class="card__body">
+                    <h2>Processed Text</h2>
+                    <div class="output-content">
+                        <div class="processed-text" id="processedText"></div>
+                        <div class="output-stats" id="outputStats"></div>
+                        <div class="output-actions">
+                            <button id="copyBtn" class="btn btn--secondary">Copy to Clipboard</button>
+                            <button id="downloadBtn" class="btn btn--outline">Download as Text File</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Toast Notifications -->
+        <div id="toast" class="toast hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

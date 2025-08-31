@@ -1,0 +1,287 @@
+{
+  "demo_note": "This is SAMPLE DATA for testing purposes only. All information is fictional and generated for demonstration.",
+  "test_scenarios": [
+    {
+      "scenario_id": "employee_records",
+      "description": "Employee database records with comprehensive PII",
+      "records": [
+        {
+          "employee_id": "EMP-2024-001",
+          "personal_info": {
+            "full_name": "John Anderson",
+            "email": "john.anderson@democorp.com",
+            "phone": "(555) 123-4567",
+            "alternate_phone": "555.987.6543",
+            "ssn": "123-45-6789",
+            "date_of_birth": "March 15, 1985",
+            "hire_date": "01/15/2020"
+          },
+          "address": {
+            "home": "123 Main Street, Springfield 12345",
+            "emergency_contact": "Jane Anderson at 789 Oak Avenue, Springfield 12346, phone (555) 234-5678"
+          },
+          "financial": {
+            "bank_account": "Routing: 123456789, Account: 987654321",
+            "credit_card": "4532-1234-5678-9012",
+            "salary_note": "Annual salary effective January 1, 2024"
+          },
+          "notes": "Contact via email sarah.wilson@democorp.com for HR matters. IP access from 192.168.1.100 approved."
+        },
+        {
+          "employee_id": "EMP-2024-002", 
+          "personal_info": {
+            "full_name": "Maria Rodriguez",
+            "email": "maria.rodriguez@democorp.com",
+            "phone": "+1-555-876-5432",
+            "ssn": "987-65-4321",
+            "date_of_birth": "July 22, 1990",
+            "hire_date": "2021-03-10"
+          },
+          "address": {
+            "home": "456 Elm Drive, Riverside 54321",
+            "previous": "789 Pine Street, Oldtown 98765-1234"
+          },
+          "financial": {
+            "credit_card": "5555 4444 3333 2222",
+            "expense_card": "4111-1111-1111-1111"
+          },
+          "emergency_contact": "Carlos Rodriguez, phone 555-345-6789, lives at 321 Maple Lane, Riverside 54322",
+          "notes": "Remote worker, VPN IP 10.0.1.50, backup email carlos.r@personal.net"
+        },
+        {
+          "employee_id": "EMP-2024-003",
+          "personal_info": {
+            "full_name": "David Chen",
+            "email": "david.chen@democorp.com", 
+            "phone": "(555) 456-7890",
+            "ssn": "456-78-9123",
+            "date_of_birth": "December 3, 1988",
+            "start_date": "09/01/2019"
+          },
+          "address": {
+            "current": "101 Technology Boulevard, Tech City 67890",
+            "mailing": "Same as current address"
+          },
+          "payment_info": {
+            "primary_card": "6011-0000-0000-0004",
+            "business_card": "3782-822463-10005"
+          },
+          "technical_access": {
+            "vpn_ip": "172.16.0.25",
+            "dev_server": "Access to dev.democorp.com from IP 203.0.113.42"
+          },
+          "references": "Previous employer: Lisa Zhang at lisa.zhang@techcorp.com, phone (555) 999-8877"
+        }
+      ]
+    },
+    {
+      "scenario_id": "customer_support_tickets",
+      "description": "Customer service interaction logs",
+      "tickets": [
+        {
+          "ticket_id": "CS-2024-10001",
+          "customer": {
+            "name": "Robert Johnson",
+            "email": "robert.johnson@email.com",
+            "phone": "555-111-2233",
+            "account_id": "CUST-789456"
+          },
+          "issue": "Account access problem reported on 2024-01-15. Customer called from (555) 111-2233 requesting password reset. Verified identity using SSN ending in 4567. Billing address confirmed as 567 Cedar Road, Hometown 13579. Credit card on file ending in 9876.",
+          "resolution": "Password reset link sent to robert.johnson@email.com. Follow-up call scheduled for January 20, 2024. Customer can also reach us at support@democorp.com or visit our office at 890 Business Park Way, Corporate City 24680.",
+          "agent_notes": "Customer mentioned spouse Jennifer Johnson, phone (555) 111-2234, as authorized contact. Alternative email: rjohnson1985@mailprovider.net"
+        },
+        {
+          "ticket_id": "CS-2024-10002", 
+          "customer": {
+            "name": "Amanda Williams",
+            "email": "amanda.w@myemail.org",
+            "phone": "555.222.3344",
+            "mobile": "(555) 333-4455"
+          },
+          "issue": "Billing inquiry submitted via https://democorp.com/support on 02/01/2024. Customer disputes charge on card 4000-1234-5678-9010. Home address: 234 Sunset Drive, Pleasantville 86420. Born April 8, 1992, SSN 234-56-7890.",
+          "payment_history": "Previous payments from IP 198.51.100.15, backup card 5105-1051-0510-5100 on file",
+          "resolution": "Refund processed on February 5, 2024. Confirmation sent to both amanda.w@myemail.org and backup email amandaw92@alternatemail.com. Customer service manager: Tom Bradley, extension 555-777-8899"
+        },
+        {
+          "ticket_id": "CS-2024-10003",
+          "customer": {
+            "name": "Michael Thompson", 
+            "email": "mthompson@businessemail.biz",
+            "phone": "+1 555 444 5566"
+          },
+          "corporate_account": {
+            "company": "Thompson Consulting LLC",
+            "tax_id": "12-3456789",
+            "billing_contact": "Susan Thompson at susan@thompsonconsulting.com, office (555) 444-5567"
+          },
+          "issue": "Service outage reported from office location 777 Commerce Street, Business District 97531 on March 10, 2024. Technical contact: James Miller, direct line (555) 444-5568, mobile 555-444-5569, email j.miller@thompsonconsulting.com",
+          "technical_details": "Server farm IP range 192.168.100.0/24 affected. Primary server 10.10.10.100, backup at 10.10.10.101. Recovery completed March 12, 2024.",
+          "billing_info": "Corporate card 3714-496353-98431 charged for emergency support. Invoice mailed to 777 Commerce Street, Business District 97531-0001"
+        }
+      ]
+    },
+    {
+      "scenario_id": "medical_records_sample",
+      "description": "Healthcare data simulation (HIPAA-sensitive types)",
+      "disclaimer": "FICTIONAL medical data for software testing only",
+      "records": [
+        {
+          "patient_id": "PAT-2024-5001",
+          "demographics": {
+            "name": "Elizabeth Brown",
+            "dob": "August 14, 1975", 
+            "ssn": "345-67-8901",
+            "phone": "(555) 567-8901",
+            "email": "e.brown@emailservice.net"
+          },
+          "address": {
+            "current": "888 Health Avenue, Wellness City 54321",
+            "insurance_mailing": "Same as current"
+          },
+          "contacts": {
+            "emergency": "Mark Brown, spouse, phone (555) 567-8902, same address",
+            "physician": "Dr. Sarah Martinez at smartinez@medicalpractice.com, office (555) 567-8900"
+          },
+          "insurance": {
+            "policy_number": "INS-8901234567",
+            "group_id": "GRP-789012",
+            "member_id": "MBR-345678901"
+          },
+          "visit_notes": "Appointment scheduled for September 30, 2024. Patient prefers email communication at e.brown@emailservice.net. Pharmacy: MedPlus at 999 Pharmacy Lane, Wellness City 54322, phone (555) 567-8905"
+        },
+        {
+          "patient_id": "PAT-2024-5002",
+          "demographics": {
+            "name": "James Davis",
+            "dob": "February 29, 1980",
+            "ssn": "567-89-0123", 
+            "phone": "555-678-9012",
+            "work_phone": "(555) 678-9013"
+          },
+          "address": {
+            "home": "111 Recovery Road, Healing Heights 65432",
+            "work": "222 Office Plaza, Work Town 76543"
+          },
+          "family_contacts": {
+            "wife": "Patricia Davis, phone (555) 678-9014, email patricia.davis@workplace.org",
+            "mother": "Helen Davis, phone (555) 678-9015, address 333 Senior Street, Retirement Village 87654"
+          },
+          "providers": {
+            "primary": "Dr. Robert Kim, rkim@healthcenter.net, direct (555) 678-9010",
+            "specialist": "Dr. Lisa Park at Central Medical, 444 Medical Center Drive, Health City 98765"
+          },
+          "appointment_history": "Last visit 2024-05-15, next scheduled 2024-11-15. Patient portal: https://patientportal.healthcenter.net, login: jdavis1980"
+        }
+      ]
+    },
+    {
+      "scenario_id": "financial_transactions", 
+      "description": "Banking and financial data samples",
+      "transactions": [
+        {
+          "account_holder": "Nancy Wilson",
+          "account_details": {
+            "ssn": "678-90-1234",
+            "phone": "(555) 789-0123",
+            "email": "nancy.wilson@bankingmail.com",
+            "address": "555 Financial Street, Money Valley 43210"
+          },
+          "accounts": {
+            "checking": "Account 1122334455, routing 987654321",
+            "savings": "Account 5566778899, same routing",
+            "credit": "Card 4444-3333-2222-1111, exp 12/27"
+          },
+          "transactions": "Wire transfer to Thomas Wilson, account 9988776655 at routing 123456789 on June 1, 2024. Online banking access from IP 203.0.113.100. Customer service callback requested to (555) 789-0124.",
+          "contacts": {
+            "joint_holder": "Thomas Wilson, same address, phone (555) 789-0125, email thomas.wilson@bankingmail.com",
+            "beneficiary": "Kevin Wilson, address 666 Next Generation Avenue, Future City 56789, phone (555) 789-0126"
+          },
+          "branch_info": "Primary branch: 777 Banking Boulevard, Money Valley 43211, phone (555) 789-0100. Manager: Jennifer Lee, direct (555) 789-0101, jlee@bank.com"
+        }
+      ]
+    },
+    {
+      "scenario_id": "government_records",
+      "description": "Public sector data handling examples",
+      "applications": [
+        {
+          "application_id": "GOV-2024-7001",
+          "applicant": {
+            "name": "Christopher Garcia",
+            "ssn": "789-01-2345",
+            "dob": "November 11, 1983",
+            "phone": "(555) 890-1234",
+            "email": "c.garcia@citizenmail.gov"
+          },
+          "address": {
+            "current": "123 Democracy Drive, Capital City 90210",
+            "previous": "456 Freedom Street, Liberty Town 01234-5678"
+          },
+          "application_details": "Permit application submitted 2024-07-01 via https://permits.gov/apply. Supporting documents mailed to 789 Government Plaza, Capital City 90211. Status updates sent to c.garcia@citizenmail.gov and backup contact karen.garcia@familyemail.net",
+          "references": {
+            "personal": "Daniel Garcia, brother, phone (555) 890-1235, address 321 Relative Road, Family City 12345",
+            "professional": "Maria Santos, supervisor at msantos@workplace.gov, office (555) 890-1200"
+          },
+          "processing_info": "Assigned to agent ID A-5001, Jennifer Torres, phone (555) 890-1300, email j.torres@gov.agency. Review scheduled August 15, 2024. Case accessible via portal at https://status.permits.gov with ID GOV-2024-7001"
+        }
+      ]
+    },
+    {
+      "scenario_id": "educational_records",
+      "description": "Student information system data",
+      "students": [
+        {
+          "student_id": "STU-2024-9001",
+          "personal": {
+            "name": "Ashley Taylor",
+            "dob": "September 5, 2000",
+            "ssn": "901-23-4567",
+            "phone": "(555) 901-2345",
+            "email": "ashley.taylor@university.edu"
+          },
+          "address": {
+            "campus": "Room 301, Dormitory Hall, University Campus 11223",
+            "permanent": "987 Student Lane, Hometown 33445",
+            "parent_address": "Same as permanent"
+          },
+          "contacts": {
+            "parent": "Rebecca Taylor, phone (555) 901-2346, email rebecca.taylor@parentmail.com",
+            "emergency": "Mark Taylor, phone (555) 901-2347, same address as permanent"
+          },
+          "academic": {
+            "advisor": "Prof. Kevin Anderson at k.anderson@university.edu, office (555) 901-2300",
+            "financial_aid": "FAFSA ID 12345678901, aid office at aid@university.edu"
+          },
+          "enrollment": "Enrolled since August 20, 2024. Student portal: https://portal.university.edu, ID: ataylor2000. Transcripts mailed to 987 Student Lane, Hometown 33445-0001"
+        }
+      ]
+    }
+  ],
+  "testing_instructions": {
+    "usage": "Copy and paste sections of this JSON into the PII Detection tool to test various scenarios",
+    "pii_types_included": [
+      "Full names (John Anderson, Maria Rodriguez, etc.)",
+      "Email addresses (various formats and domains)",
+      "Phone numbers (multiple formats: (555) 123-4567, 555.123.4567, +1-555-123-4567)",
+      "Social Security Numbers (XXX-XX-XXXX format)",
+      "Credit card numbers (various card types and formats)",
+      "Addresses (street addresses with various formats)",
+      "ZIP codes (5-digit and ZIP+4 formats)",
+      "Dates (multiple formats: MM/DD/YYYY, Month DD, YYYY, YYYY-MM-DD)",
+      "IP addresses (IPv4 addresses)",
+      "URLs (https://domain.com format)"
+    ],
+    "test_recommendations": [
+      "Test with individual records first",
+      "Try copy-pasting entire scenarios to test bulk processing",
+      "Test different encryption methods on the same data",
+      "Verify that all PII types are properly detected and highlighted",
+      "Test the toggle functionality by disabling certain PII types"
+    ]
+  },
+  "data_statistics": {
+    "total_characters": "Approximately 15000 characters",
+    "total_records": "15+ individual records across multiple scenarios",
+    "pii_instances": "100+ individual PII data points for comprehensive testing"
+  }
+}
